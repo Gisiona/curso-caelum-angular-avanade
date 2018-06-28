@@ -1,3 +1,48 @@
-<p>
-  cadastro works!
-</p>
+<header class="jumbotron">
+  <h1 class="text-center"> Cadastro de fotos</h1>
+</header>
+
+<main class="container">
+
+
+
+  <form class="col-md-5"  (ngSubmit)="salvar(foto)" >
+
+    <div class="row" *ngIf="mensagem.texto">
+        <div class="col-10 offset-2">
+          <app-mensagem [texto]="mensagem.texto" [tipo]="mensagem.tipo"> </app-mensagem>           
+        </div>
+    </div>
+
+      <div class="row">
+          <div class="form-group col-md-12">
+              <label for="">Titulo</label>
+              <input (keyup)="foto.titulo = $event.target.value" name="titulo" type="text" class="form-control">
+            </div>
+        
+            <div class="form-group col-md-12">
+              <label for="">URL</label>
+              <input [(ngModel)]="foto.url" name="url" type="text" class="form-control">
+            </div>
+        
+            <div class="form-group col-md-12">
+              <label for="">Descrição</label>
+              <textarea [(ngModel)]="foto.descricao"  type="text" name="descricao" class="form-control"> </textarea>
+            </div>
+      </div>
+    
+
+    <div class="row col-md-12">
+        <a routerLink="" class="btn btn-primary btn-lg float-left">Voltar</a>
+        <button type="submit" class="btn btn-success btn-lg">Salvar</button>
+      </div>
+
+      
+  </form>
+
+  <aside class="col-md-5">
+    <h2>preview</h2>
+  </aside>
+
+  
+</main>

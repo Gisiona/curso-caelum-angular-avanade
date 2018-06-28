@@ -6,6 +6,13 @@
   </header>
 
   <main class="container">
+    
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <a routerLink="/cadastro" class="btn btn-primary"> Nova Foto</a>
+      </div>
+      
+    </div>
     <div class="row" >
         <app-card *ngFor="let foto of listaFotos | async" [foto]="foto" class="col-md-3">  </app-card>
     </div>

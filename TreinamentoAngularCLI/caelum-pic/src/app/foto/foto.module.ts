@@ -11,7 +11,7 @@ import { FotoComponent } from './foto.component';
     exports: [FotoComponent]
 })
 
-export class FotoModule{
+export class FotoModule {
 
 }
 
