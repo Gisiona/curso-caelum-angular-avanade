@@ -14,5 +14,6 @@ export class FotoComponent {
   @Input() titulo = 'CURSO DE ANGULAR 5 AVANADE.';
   @Input() url = '../assets/img/foto.png';
   @Input() descricao = '';
+  @Input() id = '';
 
 }
